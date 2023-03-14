@@ -5,7 +5,7 @@ include sqlite3
 #
 confile=open("config.txt", "r", encoding="utf-8")
 conflist=[]
-#start appending conflist with stream data
+#start appending conflist with stream data************
 #get working directory********************************
 #
 #dont be a fool
