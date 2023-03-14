@@ -23,7 +23,7 @@ args = ''
 #float = real
 #binary = blob
 #
-argline.execute("create table testTable(year integer, titles int)")
+argline.execute("create table testTable(year integer, titles string)")
 # ^^^^^ start passing commands
 #
 #dont sql inject pls. do a batch insert (for speed, zoom!)
