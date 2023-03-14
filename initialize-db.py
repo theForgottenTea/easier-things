@@ -3,12 +3,19 @@ include sqlite3
 #
 #load cosmetics from a configuration file***********************
 #
+confile=open("config.txt", "r", encoding="utf-8")
+conflist=[]
+#start appending conflist with stream data
 #get working directory********************************
+#
+#dont be a fool
+confile.close()
+#dont be a fool
 #
 #eventually a list will be used... so here.
 somelist=[]
 connection = sqlite3.connect("test.db")
-argline = connection.cursor()
+sqlcursor = connection.cursor()
 #
 #
 #i assume execute only takes string info to run sql things on... so we use string (:
@@ -23,7 +30,7 @@ args = ''
 #float = real
 #binary = blob
 #
-argline.execute("create table testTable(year integer, titles string)")
+sqlcursor.execute("create table testTable(year integer, titles string)")
 # ^^^^^ start passing commands
 #
 #dont sql inject pls. do a batch insert (for speed, zoom!)
